@@ -337,7 +337,7 @@ To deploy this cluster fill in the inventory file as follows:
 		hadoop_slaves
 
 		[hadoop_master_primary]
-		zhadoop1
+		hadoop1
 
 		[hadoop_master_secondary]
 
