@@ -89,7 +89,7 @@ As a first step checkout this repository onto you ansible management host and se
         ec2-54-227-176-123.compute-1.amazonaws.com
         ec2-54-227-177-87.compute-1.amazonaws.com
 
-Once the inventroy is setup with hosts in your environment the Openshift stack can be deployed easily by issuing the following command.
+Once the inventory is setup with hosts in your environment the Openshift stack can be deployed easily by issuing the following command.
 
         ansible-playbook -i hosts site.yml
 
