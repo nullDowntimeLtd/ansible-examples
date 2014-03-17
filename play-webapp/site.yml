@@ -3,6 +3,9 @@
 
 - hosts: webapp_server
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
      - role: common
      - role: webapp

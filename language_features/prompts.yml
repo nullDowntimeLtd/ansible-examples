@@ -5,6 +5,9 @@
 
 - hosts: all
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
 # regular variables are a dictionary of keys and values
 

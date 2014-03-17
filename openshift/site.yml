@@ -1,34 +1,55 @@
 
 - hosts: all
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
       - role: common
 
 - hosts: dns
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
       - role: dns
 - hosts: mongo_servers
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
       - role: mongodb
 
 - hosts: mq
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
       - role: mq
 
 - hosts: broker
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
    - role: broker
 
 - hosts: nodes
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
    - role: nodes
 
 - hosts: lvs
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
    - role: lvs

@@ -17,6 +17,9 @@
 
 - hosts: pull_mode_hosts
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   vars:
 

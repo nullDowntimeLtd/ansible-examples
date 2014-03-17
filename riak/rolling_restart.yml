@@ -1,7 +1,10 @@
 ---
 - hosts: riak_cluster
   serial: 1
-  sudo: True
+  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   pre_tasks:
   - name: make sure there are no transfers happening
     riak: wait_for_handoffs=600

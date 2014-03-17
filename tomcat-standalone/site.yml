@@ -3,6 +3,9 @@
 
 - hosts: tomcat-servers 
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   roles:
     - selinux

@@ -10,6 +10,9 @@
 - name: example play
   hosts: all
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
 # could have also have done:
 #  user: mdehaan

@@ -5,6 +5,10 @@
 # free to comment your playbooks if you like.
 
 - hosts: all
+  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   # we can define variables the normal way...
 

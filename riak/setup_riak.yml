@@ -1,12 +1,18 @@
 ---
 - hosts: riak_cluster
-  sudo: True
+  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
   - bootstrap/common
 
 - hosts: Ubuntu
   gather_facts: no
-  sudo: True
+  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
   - bootstrap/ubuntu
   - riak/ubuntu
@@ -14,7 +20,10 @@
 
 - hosts: CentOS:RedHat
   gather_facts: no
-  sudo: True
+  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   roles:
   - bootstrap/redhat
   - riak/redhat

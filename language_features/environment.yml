@@ -9,6 +9,9 @@
 
 - hosts: all
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   # here we make a variable named "env" that is a dictionary
   vars:

@@ -1,6 +1,9 @@
 ---
 - hosts: rabbitmq
+  user: root
+  remote_user: vagrant
   sudo: true
+  ask_sudo_pass: false
   vars:
     rabbitmq_version: 3.0.2-1
 

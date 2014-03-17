@@ -5,6 +5,9 @@
 
 - name: test playbook
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   hosts: all
 
   tasks:

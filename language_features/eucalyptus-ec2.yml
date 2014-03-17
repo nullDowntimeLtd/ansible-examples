@@ -15,6 +15,9 @@
   hosts: local
   connection: local
   user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   gather_facts: false
 
   vars:
