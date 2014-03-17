@@ -1,8 +1,8 @@
 serial_no = 1
-primary = {{ hostvars[groups['lvs'][0]].ansible_default_ipv4.address }} 
+primary = {{ hostvars[groups['lvs'][0]].ansible_eth1.ipv4.address }} 
 service = lvs
 backup_active = 1
-backup = {{ hostvars[groups['lvs'][1]].ansible_default_ipv4.address }}
+backup = {{ hostvars[groups['lvs'][1]].ansible_eth1.ipv4.address }}
 heartbeat = 1
 heartbeat_port = 539
 keepalive = 6
@@ -31,13 +31,13 @@ virtual brokers {
      reentry = 45
      quiesce_server = 0
      server web1 {
-         address = {{ hostvars[groups['broker'][0]].ansible_default_ipv4.address }}
+         address = {{ hostvars[groups['broker'][0]].ansible_eth1.ipv4.address }}
          active = 1
          port = 443
          weight = 0
      }
      server web2 {
-         address = {{ hostvars[groups['broker'][1]].ansible_default_ipv4.address }}
+         address = {{ hostvars[groups['broker'][1]].ansible_eth1.ipv4.address }}
          active = 1
          port = 443
          weight = 0

@@ -10,7 +10,7 @@ define hostgroup {
                 use                     linux-server
                 host_name               {{ host }}
                 alias                   {{ host }}
-                address                 {{ hostvars[host].ansible_default_ipv4.address }}
+                address                 {{ hostvars[host].ansible_eth1.ipv4.address }}
                 hostgroups              dbservers 
                 }
 {% endfor %}
