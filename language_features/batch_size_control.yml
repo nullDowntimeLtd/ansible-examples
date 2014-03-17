@@ -5,7 +5,7 @@
 ---
 - hosts: all
   serial: 3
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

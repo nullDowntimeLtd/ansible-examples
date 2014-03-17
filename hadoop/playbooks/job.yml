@@ -2,7 +2,7 @@
 # Launch Job to count occurance of a word.
 
 - hosts: $server
-  user: root
+  public_network
   tasks:
    - name: copy the file 
      copy: src=inputfile dest=/tmp/inputfile 

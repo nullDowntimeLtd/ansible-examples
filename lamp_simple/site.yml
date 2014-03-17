@@ -3,7 +3,7 @@
 
 - name: apply common configuration to all nodes
   hosts: all
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -13,7 +13,7 @@
 
 - name: configure and deploy the webservers and application code
   hosts: webservers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -23,7 +23,7 @@
 
 - name: deploy MySQL and configure the databases
   hosts: dbservers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

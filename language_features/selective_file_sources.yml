@@ -5,7 +5,7 @@
 # or ohai facts could be used to do this.
 
 - hosts: all
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

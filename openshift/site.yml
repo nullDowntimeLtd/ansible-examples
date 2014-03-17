@@ -1,6 +1,6 @@
 
 - hosts: all
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -8,14 +8,14 @@
       - role: common
 
 - hosts: dns
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
   roles:
       - role: dns
 - hosts: mongo_servers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -23,7 +23,7 @@
       - role: mongodb
 
 - hosts: mq
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -31,7 +31,7 @@
       - role: mq
 
 - hosts: broker
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -39,7 +39,7 @@
    - role: broker
 
 - hosts: nodes
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -47,7 +47,7 @@
    - role: nodes
 
 - hosts: lvs
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

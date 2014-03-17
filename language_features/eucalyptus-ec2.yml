@@ -14,7 +14,7 @@
 - name: Stage instance(s)
   hosts: local
   connection: local
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -56,7 +56,7 @@
 # This play targets the new host group
 - name: Configure instance
   hosts: deploy
-  user: root
+  public_network
 
   # Do some stuff on each instance ....
 

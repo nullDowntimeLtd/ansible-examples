@@ -2,7 +2,7 @@
 # The main playbook to deploy the site
 
 - hosts: hadoop_all
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -10,7 +10,7 @@
    - common
 
 - hosts: zookeeper_servers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -18,7 +18,7 @@
   - { role: zookeeper_servers, when: ha_enabled }
 
 - hosts: qjournal_servers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -26,7 +26,7 @@
   - { role: qjournal_servers, when: ha_enabled }
 
 - hosts: hadoop_master_primary
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -34,7 +34,7 @@
   - { role: hadoop_primary }
 
 - hosts: hadoop_master_secondary
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -42,7 +42,7 @@
   - { role: hadoop_secondary, when: ha_enabled }
 
 - hosts: hadoop_slaves
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

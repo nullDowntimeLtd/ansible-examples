@@ -9,14 +9,14 @@
 
 # gather facts from monitoring nodes for iptables rules
 - hosts: monitoring
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
   tasks: []
 
 - hosts: webservers
-  user: root
+  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
