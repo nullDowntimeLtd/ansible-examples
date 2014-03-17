@@ -1,6 +1,5 @@
 ---
 - hosts: riak_cluster
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -9,7 +8,6 @@
 
 - hosts: Ubuntu
   gather_facts: no
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -20,7 +18,6 @@
 
 - hosts: CentOS:RedHat
   gather_facts: no
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

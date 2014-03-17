@@ -2,7 +2,6 @@
 # This playbook deploys a simple standalone JBoss server. 
 
 - hosts: jboss-servers 
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

@@ -1,8 +1,7 @@
 ---
 # Main Play webapp deployment playbook
 
-- hosts: webapp_server
-  public_network
+- hosts: standalone
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

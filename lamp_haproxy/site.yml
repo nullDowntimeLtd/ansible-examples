@@ -3,7 +3,6 @@
 
 # Apply common configuration to all hosts
 - hosts: all
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -12,7 +11,6 @@
 
 # Configure and deploy database servers.
 - hosts: dbservers
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -23,7 +21,6 @@
 # the 'base-apache' role which simply sets up Apache, and 'web' which includes
 # our example web application.
 - hosts: webservers
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -33,7 +30,6 @@
 
 # Configure and deploy the load balancer(s).
 - hosts: lbservers
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
@@ -42,7 +38,6 @@
 
 # Configure and deploy the Nagios monitoring node(s).
 - hosts: monitoring
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false

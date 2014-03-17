@@ -37,7 +37,7 @@ from inside Scala.
 Before running the playbook, modify the inventory file 'hosts' to match your
 environment. Here's an example inventory:
 
-        [webapp_server]
+        [standalone]
         play_server
 
 Run the playbook to deploy the app:
