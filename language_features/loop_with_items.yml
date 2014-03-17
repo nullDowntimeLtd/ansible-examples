@@ -4,7 +4,9 @@
 # multiple users
 
 - hosts: all
-  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   tasks:
 

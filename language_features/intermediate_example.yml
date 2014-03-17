@@ -5,6 +5,9 @@
 # free to comment your playbooks if you like.
 
 - hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   # we can define variables the normal way...
 
@@ -67,7 +70,9 @@
 # if you want.  sudo support is coming too.
 
 - hosts: webservers
-  user: mdehaan
+  remote_user: mdehaan
+  sudo: true
+  ask_sudo_pass: false
 
   # vars must be specified again for the next play in the playbook
   # but can be reused by including from vars_files if you want

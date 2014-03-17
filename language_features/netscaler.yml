@@ -4,6 +4,9 @@
 #
 
 - hosts: web-pool
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   serial: 3
   vars:
   	nsc_host: nsc.example.com

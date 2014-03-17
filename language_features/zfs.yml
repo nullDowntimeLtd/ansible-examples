@@ -5,7 +5,9 @@
 
 - hosts: webservers
   gather_facts: no
-  sudo: yes
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   vars:
     pool: rpool

@@ -2,5 +2,9 @@
 
 - name: Demonstrate custom jinja2 filters
   hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
+  
   tasks:
   - action: template src=templates/custom-filters.j2 dest=/tmp/custom-filters.txt

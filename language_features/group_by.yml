@@ -9,6 +9,9 @@
 # and use those for grouping.  This is not shown in this example.
 
 - hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   tasks:
 

@@ -6,6 +6,9 @@
 # see lib/ansible/runner/lookup_plugins/fileglob.py -- they can do basically anything!
 
 - hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   gather_facts: no
 
   tasks:

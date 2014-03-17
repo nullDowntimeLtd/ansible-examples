@@ -25,6 +25,10 @@
 ---
 
   - hosts: all
+    remote_user: vagrant
+    sudo: true
+    ask_sudo_pass: false
+    
     roles:
 
     # a role can be listed flat like this: 

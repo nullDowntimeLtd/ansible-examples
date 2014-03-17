@@ -13,7 +13,9 @@
 # parameters take a higher priority, so you can use them for defaults, which can be useful.
 
 - hosts: all
-  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   gather_facts: no
  
   vars:

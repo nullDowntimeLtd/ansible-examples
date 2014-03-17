@@ -5,6 +5,9 @@
 # or ohai facts could be used to do this.
 
 - hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
   tasks:
 

@@ -14,7 +14,9 @@
 # as root
 
 - hosts: all
-  user: root
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
 
 # we have a common list of variables stored in /vars/external_vars.yml
 # that we will always import

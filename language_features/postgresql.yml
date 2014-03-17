@@ -7,7 +7,9 @@
 #
 ---
 - hosts: webservers
-  sudo: yes
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   gather_facts: no
 
   tasks:
@@ -21,7 +23,8 @@
         - python-psycopg2
 
 - hosts: webservers
-  sudo: yes
+  remote_user: vagrant
+  sudo: true
   sudo_user: postgres
   gather_facts: no
 

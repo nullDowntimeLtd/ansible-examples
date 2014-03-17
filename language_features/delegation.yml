@@ -17,6 +17,9 @@
 # 5 hosts at a time
 
 - hosts: all
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   serial: 5
 
   tasks:
