@@ -2,7 +2,6 @@
 # This playbook deploys a simple standalone Tomcat 7 server. 
 
 - hosts: tomcat-servers 
-  public_network
   remote_user: vagrant
   sudo: true
   ask_sudo_pass: false
