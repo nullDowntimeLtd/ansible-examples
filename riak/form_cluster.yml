@@ -1,5 +1,7 @@
 - hosts: riak_cluster
-  sudo: True
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   tasks:
   - name: Create a group based on riak node type.
     group_by: key={{ node_type }}
@@ -10,13 +12,17 @@
 - hosts: middle:last
   vars:
      primary_node: "{{ hostvars[groups['primary'][0]]['riak_outputs']['node_name'] }}"
-  sudo: True
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   tasks:
   - name: join riak cluster
     riak: command=join target_node={{ primary_node }}
 
 - hosts: last
-  sudo: True
+  remote_user: vagrant
+  sudo: true
+  ask_sudo_pass: false
   tasks:
   - name: plan cluster changes
     riak: command=plan
