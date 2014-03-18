@@ -16,7 +16,7 @@ tcpfin_timeout = 30
 udp_timeout = 30
 virtual brokers {
      active = 1
-     address = {{ vip }} {{ hostvars[groups['lvs'][0]].ansible_default_ipv4.interface }}:1
+     address = {{ vip }} {{ hostvars[groups['lvs'][0]].ansible_eth1.ipv4.interface }}:1
      vip_nmask = {{ vip_netmask }}
      port = 443
      persistent = 10

@@ -13,7 +13,7 @@ ec2_elbs: oselb
 region: "us-east-1"
 zone: "us-east-1a"
 
-iface: '{{ ansible_default_ipv4.interface }}'
+iface: '{{ ansible_eth1.ipv4.interface }}'
 
 domain_name: example.com
 dns_port: 53

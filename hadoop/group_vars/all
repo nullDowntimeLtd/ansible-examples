@@ -4,7 +4,7 @@
 #
 # ...to override.
 #
-iface: '{{ ansible_default_ipv4.interface }}'
+iface: '{{ ansible_eth1.ipv4.interface }}'
 
 ha_enabled: False 
 
