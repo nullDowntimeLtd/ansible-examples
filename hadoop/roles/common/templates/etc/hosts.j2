@@ -1,5 +1,5 @@
 127.0.0.1 localhost
 {% for host in groups.all %}
-{{ hostvars[host]['ansible_' + iface].ipv4.address }}  {{ host }}
+{{ hostvars[host].ansible_eth1.ipv4.address }}  {{ host }}
 {% endfor %}
 
