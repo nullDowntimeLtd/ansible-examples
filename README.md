@@ -4,7 +4,7 @@ Ansible Examples
 
 This repository contains examples and best practices for building Ansible Playbooks.
 
-It is adapted from https://github.com/ansible/ansible-examples and is intended to be used with a Vagrant/ansible/Tower demo found here:
+It is adapted from https://github.com/ansible/ansible-examples and is intended to be used with a Vagrant/Ansible/Tower demo found here:
 
 https://github.com/dfederlein/vagrant-tower
 
