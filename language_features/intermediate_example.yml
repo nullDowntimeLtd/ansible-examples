@@ -7,7 +7,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  ask_sudo_pass: false
+  public_network
 
   # we can define variables the normal way...
 
@@ -72,7 +72,7 @@
 - hosts: webservers
   remote_user: mdehaan
   sudo: true
-  ask_sudo_pass: false
+  public_network
 
   # vars must be specified again for the next play in the playbook
   # but can be reused by including from vars_files if you want

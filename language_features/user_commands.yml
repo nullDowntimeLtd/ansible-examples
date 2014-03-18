@@ -5,7 +5,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  ask_sudo_pass: false
+  public_network
   vars:
     # created with:
     # python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'

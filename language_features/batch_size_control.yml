@@ -6,7 +6,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  ask_sudo_pass: false
+  public_network
   serial: 3
 
 # now each of the tasks below will complete on 3 hosts before moving on to the next 3, regardless of how many
