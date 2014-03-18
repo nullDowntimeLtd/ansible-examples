@@ -1,7 +1,7 @@
 - hosts: riak_cluster
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks:
   - name: Create a group based on riak node type.
     group_by: key={{ node_type }}
@@ -14,7 +14,7 @@
      primary_node: "{{ hostvars[groups['primary'][0]]['riak_outputs']['node_name'] }}"
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks:
   - name: join riak cluster
     riak: command=join target_node={{ primary_node }}
@@ -22,7 +22,7 @@
 - hosts: last
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks:
   - name: plan cluster changes
     riak: command=plan

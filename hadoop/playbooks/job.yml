@@ -2,7 +2,8 @@
 # Launch Job to count occurance of a word.
 
 - hosts: $server
-  public_network
+  remote_user: vagrant
+  
   tasks:
    - name: copy the file 
      copy: src=inputfile dest=/tmp/inputfile 

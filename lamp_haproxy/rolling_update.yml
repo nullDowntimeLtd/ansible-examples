@@ -9,17 +9,17 @@
 
 # gather facts from monitoring nodes for iptables rules
 - hosts: monitoring
-  public_network
+  
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks: []
 
 - hosts: webservers
-  public_network
+  
   remote_user: vagrant
   sudo: true
-  public_network
+  
   serial: 1
   
   # These are the tasks to run before applying updates:

@@ -2,7 +2,7 @@
 - hosts: riak_cluster
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - bootstrap/common
 
@@ -10,7 +10,7 @@
   gather_facts: no
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - bootstrap/ubuntu
   - riak/ubuntu
@@ -20,7 +20,7 @@
   gather_facts: no
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - bootstrap/redhat
   - riak/redhat

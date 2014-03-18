@@ -6,7 +6,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
 
 # regular variables are a dictionary of keys and values
 

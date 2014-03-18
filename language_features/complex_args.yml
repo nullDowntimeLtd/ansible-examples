@@ -15,7 +15,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   gather_facts: no
  
   vars:

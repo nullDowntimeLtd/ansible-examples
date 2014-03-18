@@ -7,7 +7,7 @@
   gather_facts: no
   remote_user: vagrant
   sudo: true
-  public_network
+  
 
   vars:
     pool: rpool

@@ -2,7 +2,7 @@
 - hosts: rabbitmq
   remote_user: vagrant
   sudo: true
-  public_network
+  
   vars:
     rabbitmq_version: 3.0.2-1
 

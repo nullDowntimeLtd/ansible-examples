@@ -6,7 +6,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   serial: 3
 
 # now each of the tasks below will complete on 3 hosts before moving on to the next 3, regardless of how many

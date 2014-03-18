@@ -19,7 +19,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   serial: 5
 
   tasks:

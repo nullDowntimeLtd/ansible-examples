@@ -6,7 +6,7 @@
 - name: test playbook
   remote_user: vagrant
   sudo: true
-  public_network
+  
   hosts: all
 
   tasks:

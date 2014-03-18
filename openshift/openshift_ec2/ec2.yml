@@ -29,32 +29,32 @@
    - debug: msg="{{ groups }}"
  
 - hosts: all:!localhost
-  public_network
+  
   roles:
       - role: common
 
 - hosts: dns
-  public_network
+  
   roles:
       - role: dns
 
 - hosts: mongo_servers
-  public_network
+  
   roles:
       - role: mongodb
 
 - hosts: mq
-  public_network
+  
   roles:
       - role: mq
 
 - hosts: broker
-  public_network
+  
   roles:
    - role: broker
 
 - hosts: nodes
-  public_network
+  
   roles:
    - role: nodes
 

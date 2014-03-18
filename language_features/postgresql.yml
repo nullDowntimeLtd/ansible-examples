@@ -9,7 +9,7 @@
 - hosts: webservers
   remote_user: vagrant
   sudo: true
-  public_network
+  
   gather_facts: no
 
   tasks:

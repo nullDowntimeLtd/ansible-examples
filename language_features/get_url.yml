@@ -2,7 +2,7 @@
 - hosts: webservers
   remote_user: vagrant
   sudo: true
-  public_network
+  
   vars:
   - jquery_directory: /var/www/html/javascript
   - person: 'Susie%20Smith'

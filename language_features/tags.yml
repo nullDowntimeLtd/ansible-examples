@@ -15,7 +15,7 @@
   hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
 
   # any tags applied to the play are shorthand to applying
   # the tag to all tasks in it.  Here, each task is given
@@ -37,7 +37,7 @@
   hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks:
   - name: hi
     tags:

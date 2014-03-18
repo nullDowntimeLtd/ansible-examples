@@ -3,7 +3,7 @@
   serial: 1
   remote_user: vagrant
   sudo: true
-  public_network
+  
   pre_tasks:
   - name: make sure there are no transfers happening
     riak: wait_for_handoffs=600

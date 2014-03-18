@@ -3,7 +3,7 @@
 - hosts: test
   remote_user: vagrant
   sudo: true
-  public_network
+  
   tasks:
     - name: Change setype of /etc/exports to non-default value
       action: file path=/etc/exports setype=etc_t

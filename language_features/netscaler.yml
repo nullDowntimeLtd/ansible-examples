@@ -6,7 +6,7 @@
 - hosts: web-pool
   remote_user: vagrant
   sudo: true
-  public_network
+  
   serial: 3
   vars:
   	nsc_host: nsc.example.com

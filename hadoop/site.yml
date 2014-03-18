@@ -4,42 +4,42 @@
 - hosts: hadoop_all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
    - common
 
 - hosts: zookeeper_servers
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - { role: zookeeper_servers, when: ha_enabled }
 
 - hosts: qjournal_servers
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - { role: qjournal_servers, when: ha_enabled }
 
 - hosts: hadoop_master_primary
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - { role: hadoop_primary }
 
 - hosts: hadoop_master_secondary
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - { role: hadoop_secondary, when: ha_enabled }
 
 - hosts: hadoop_slaves
   remote_user: vagrant
   sudo: true
-  public_network
+  
   roles:
   - { role: hadoop_slaves }
 

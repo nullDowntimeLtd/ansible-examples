@@ -12,7 +12,7 @@
   hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
   
   tasks:
   - name: say hi

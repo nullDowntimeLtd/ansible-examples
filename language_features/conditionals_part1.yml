@@ -16,7 +16,7 @@
 - hosts: all
   remote_user: vagrant
   sudo: true
-  public_network
+  
 
 # we have a common list of variables stored in /vars/external_vars.yml
 # that we will always import
