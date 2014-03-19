@@ -2,7 +2,7 @@
 # This playbook deploys the whole application stack in this site.  
 
 - name: apply common configuration to all nodes
-  hosts: webservers
+  hosts: first3
   remote_user: vagrant
   sudo: true
   
