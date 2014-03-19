@@ -14,16 +14,16 @@
   sudo: True
 
 - name: Download Tomcat
-  get_url: url=http://www.eng.lsu.edu/mirrors/apache/tomcat/tomcat-7/v7.0.52/src/apache-tomcat-7.0.52-src.tar.gz dest=/opt/apache-tomcat-7.0.50.tar.gz
+  get_url: url=http://www.eng.lsu.edu/mirrors/apache/tomcat/tomcat-7/v7.0.52/src/apache-tomcat-7.0.52-src.tar.gz dest=/opt/apache-tomcat-7.0.52.tar.gz
 
 - name: Extract archive
-  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.50.tar.gz -C /opt/ creates=/opt/apache-tomcat-7.0.50
+  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.52.tar.gz -C /opt/ creates=/opt/apache-tomcat-7.0.52
 
 - name: Symlink install directory
-  file: src=/opt/apache-tomcat-7.0.50 path=/usr/share/tomcat state=link
+  file: src=/opt/apache-tomcat-7.0.52 path=/usr/share/tomcat state=link
 
 - name: Change ownership of Tomcat installation
-  file: path=/opt/apache-tomcat-7.0.50 owner=tomcat group=tomcat state=directory recurse=yes
+  file: path=/opt/apache-tomcat-7.0.52 owner=tomcat group=tomcat state=directory recurse=yes
 
 - name: Configure Tomcat server
   template: src=server.xml dest=/usr/share/tomcat/conf/
