@@ -29,6 +29,12 @@
 - name: Change ownership of Tomcat installation
   file: path=/opt/apache-tomcat-7.0.52-src owner=tomcat group=tomcat state=directory recurse=yes
 
+- name: logdir creation
+  file: path=/opt/apache-tomcat-7.0.52-src/logs owner=tomcat group=tomcat state=directory recurse=yes
+
+- name: permissions fixes
+  shell: chmod 755 /opt/apache-tomcat-7.0.52-src/bin/*
+
 - name: Configure Tomcat server
   template: src=server.xml dest=/usr/share/tomcat/conf/
   notify: restart tomcat
@@ -40,12 +46,15 @@
 - name: Install Tomcat init script
   copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
 
-- name: Start Tomcat
-  service: name=tomcat state=started enabled=yes
+- name: permissions fix
+  shell: chown root.root /etc/init.d/tomcat
 
 - name: deploy iptables rules
   template: src=iptables-save dest=/etc/sysconfig/iptables
   notify: restart iptables
+
+- name: Start Tomcat
+  service: name=tomcat state=started enabled=yes
 
 - name: wait for tomcat to start
   wait_for: port={{http_port}}
