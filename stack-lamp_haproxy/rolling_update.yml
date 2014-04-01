@@ -9,15 +9,13 @@
 
 # gather facts from monitoring nodes for iptables rules
 - hosts: tag_Name_monitoring
-  
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   tasks: []
 
 - hosts: tag_Name_webservers
-  
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   serial: 1
   
   # These are the tasks to run before applying updates:

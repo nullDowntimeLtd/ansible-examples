@@ -13,7 +13,6 @@
       keypair: "{{ item.keypair }}"
       instance_type: "{{ item.instance_type }}"
       image: "{{ item.image }}"
-      vpc_subnet_id: "{{ subnet_maps[item.subnet] }}"
       wait: true
       instance_tags: "{{ item.instance_tags }}"
       exact_count: "{{ item.exact_count }}"

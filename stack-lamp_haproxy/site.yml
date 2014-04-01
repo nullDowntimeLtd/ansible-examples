@@ -3,8 +3,8 @@
 
 # Apply common configuration to all hosts
 - hosts: all
-  remote_user: root
-
+  remote_user: {{ uservar }}
+  sudo: true
   pre_tasks:
 
   - name: Raw bootstrap for python
@@ -15,8 +15,8 @@
 
 # Configure and deploy database servers.
 - hosts: tag_Name_dbservers
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   roles:
   - db
 
@@ -24,23 +24,23 @@
 # the 'base-apache' role which simply sets up Apache, and 'web' which includes
 # our example web application.
 - hosts: tag_Name_webservers
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   roles:
   - base-apache
   - web
 
 # Configure and deploy the load balancer(s).
 - hosts: tag_Name_lbservers
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   roles:
   - haproxy
 
 # Configure and deploy the Nagios monitoring node(s).
 - hosts: tag_Name_monitoring
-  remote_user: root
-  
+  remote_user: {{ uservar }}
+  sudo: true
   roles:
   - base-apache
   - nagios
