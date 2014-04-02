@@ -9,8 +9,6 @@ ec2_security_group: default
 
 ec2_new_instances:
   - instance_type: t1.micro
-    image: ami-eb6b0182
-    keypair: dfed-vagrant
     group: demo
     instance_tags: 
         Name: webservers
@@ -19,8 +17,6 @@ ec2_new_instances:
         Name: webcount
 
   - instance_type: t1.micro
-    image: ami-eb6b0182
-    keypair: dfed-vagrant
     group: demo
     instance_tags: 
         Name: lbservers
@@ -29,8 +25,6 @@ ec2_new_instances:
         Name: lbcount
 
   - instance_type: t1.micro
-    image: ami-eb6b0182
-    keypair: dfed-vagrant
     group: demo
     instance_tags: 
         Name: dbservers
@@ -39,8 +33,6 @@ ec2_new_instances:
         Name: dbcount
 
   - instance_type: t1.micro
-    image: ami-eb6b0182
-    keypair: dfed-vagrant
     group: demo
     instance_tags: 
         Name: monitoring
