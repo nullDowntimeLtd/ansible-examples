@@ -14,7 +14,7 @@
   - common
 
 # Configure and deploy database servers.
-- hosts: tag_Name_dbservers
+- hosts: tag_Demo_dbservers
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
@@ -23,7 +23,7 @@
 # Configure and deploy the web servers. Note that we include two roles here, 
 # the 'base-apache' role which simply sets up Apache, and 'web' which includes
 # our example web application.
-- hosts: tag_Name_webservers
+- hosts: tag_Demo_webservers
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
@@ -31,14 +31,14 @@
   - web
 
 # Configure and deploy the load balancer(s).
-- hosts: tag_Name_lbservers
+- hosts: tag_Demo_lbservers
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
   - haproxy
 
 # Configure and deploy the Nagios monitoring node(s).
-- hosts: tag_Name_monitoring
+- hosts: tag_Demo_monitoring
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
