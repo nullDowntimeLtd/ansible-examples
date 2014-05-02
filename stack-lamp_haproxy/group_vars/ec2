@@ -1,5 +1,5 @@
 ---
-ec2_access_key:
+ec2_access_key: 
 ec2_secret_key: 
 ec2_region: us-east-1
 ec2_image: ami-eb6b0182 
@@ -11,7 +11,8 @@ ec2_new_instances:
   - instance_type: t1.micro
     group: demo
     instance_tags: 
-        Name: webservers
+        Demo: webservers
+        Name: demoaws
     exact_count: 2
     count_tag: 
         Name: webcount
@@ -19,7 +20,8 @@ ec2_new_instances:
   - instance_type: t1.micro
     group: demo
     instance_tags: 
-        Name: lbservers
+        Demo: lbservers
+        Name: demoaws
     exact_count: 1
     count_tag: 
         Name: lbcount
@@ -27,7 +29,8 @@ ec2_new_instances:
   - instance_type: t1.micro
     group: demo
     instance_tags: 
-        Name: dbservers
+        Demo: dbservers
+        Name: demoaws
     exact_count: 1
     count_tag: 
         Name: dbcount
@@ -35,7 +38,8 @@ ec2_new_instances:
   - instance_type: t1.micro
     group: demo
     instance_tags: 
-        Name: monitoring
+        Demo: monitoring
+        Name: demoaws
     exact_count: 1
     count_tag: 
         Name: moncount

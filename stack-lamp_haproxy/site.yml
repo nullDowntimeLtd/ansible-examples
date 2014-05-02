@@ -2,7 +2,7 @@
 # This playbook deploys the whole application stack in this site.  
 
 # Apply common configuration to all hosts
-- hosts: all
+- hosts: tag_Name_demoaws
   remote_user: "{{ uservar }}"
   sudo: true
   pre_tasks:
