@@ -1,6 +1,6 @@
-[webservers]
+[tag_Demo_webservers]
 webserver1
 webserver2
 
-[dbservers]
+[tag_Demo_dbservers]
 dbserver
