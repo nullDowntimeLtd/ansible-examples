@@ -1,7 +1,7 @@
 ---
 - name: webserver configuration play 
   hosts: tag_Demo_webservers
-  user: vagrant
+  remote_user: "{{ uservar }}"
   sudo: true
   sudo_user: root
 

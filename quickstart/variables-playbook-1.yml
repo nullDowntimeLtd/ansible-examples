@@ -1,7 +1,7 @@
 ---
 - name: show how to use variables in playbooks and templates (run with -v)
   hosts: all
-  user: vagrant
+  remote_user: "{{ uservar }}"
   sudo: true
   sudo_user: root
 
