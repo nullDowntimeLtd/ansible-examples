@@ -1,6 +1,9 @@
 ---
 - name: show how to use variables in playbooks and templates (run with -v)
   hosts: all
+  user: vagrant
+  sudo: true
+  sudo_user: root
 
   vars:
     - greeting: "Hello"

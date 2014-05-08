@@ -1,6 +1,9 @@
 ---
 - name: set up a webserver
-  hosts: webservers
+  hosts: tag_Demo_webservers
+  user: vagrant
+  sudo: true
+  sudo_user: root
 
   roles:
     - webserver

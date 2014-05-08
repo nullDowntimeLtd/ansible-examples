@@ -1,6 +1,9 @@
 ---
 - name: webserver configuration play 
-  hosts: webservers
+  hosts: tag_Demo_webservers
+  user: vagrant
+  sudo: true
+  sudo_user: root
 
   vars:
     http_port: 80

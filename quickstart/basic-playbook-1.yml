@@ -1,7 +1,9 @@
 ---
 - name: install and start apache
-  hosts: webservers
-  user: root
+  hosts: tag_Demo_webservers
+  user: vagrant
+  sudo: true
+  sudo_user: root
 
   tasks:
 
