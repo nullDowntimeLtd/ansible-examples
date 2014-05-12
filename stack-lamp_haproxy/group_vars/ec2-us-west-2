@@ -1,0 +1,45 @@
+---
+ec2_access_key: 
+ec2_secret_key: 
+ec2_region: us-west-2
+ec2_image: ami-b158c981
+ec2_instance_type: t1.micro
+ec2_keypair: dfed-vagrant
+ec2_security_group: default
+
+ec2_new_instances:
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: webservers
+        Name: demoaws
+    exact_count: 2
+    count_tag: 
+        Name: webcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: lbservers
+        Name: demoaws
+    exact_count: 1
+    count_tag: 
+        Name: lbcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: dbservers
+        Name: demoaws
+    exact_count: 1
+    count_tag: 
+        Name: dbcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: monitoring
+        Name: demoaws
+    exact_count: 1
+    count_tag: 
+        Name: moncount

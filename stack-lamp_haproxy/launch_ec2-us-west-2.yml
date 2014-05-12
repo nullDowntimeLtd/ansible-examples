@@ -3,7 +3,7 @@
   connection: local
   gather_facts: False
   vars_files:
-  - group_vars/ec2
+  - group_vars/ec2-us-west-2
   tasks:
   - name: Create the Instances for this vpc 
     ec2:
