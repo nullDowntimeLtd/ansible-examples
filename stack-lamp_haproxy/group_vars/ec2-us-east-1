@@ -11,6 +11,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: webservers
         Name: demoaws
+        Limit: east
     exact_count: 2
     count_tag: 
         Name: webcount
@@ -20,6 +21,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: lbservers
         Name: demoaws
+        Limit: east
     exact_count: 1
     count_tag: 
         Name: lbcount
@@ -29,6 +31,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: dbservers
         Name: demoaws
+        Limit: east
     exact_count: 1
     count_tag: 
         Name: dbcount
@@ -38,6 +41,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: monitoring
         Name: demoaws
+        Limit: east
     exact_count: 1
     count_tag: 
         Name: moncount
