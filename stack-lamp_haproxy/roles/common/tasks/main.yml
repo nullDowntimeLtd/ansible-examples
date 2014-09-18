@@ -1,7 +1,7 @@
 ---
 # This role contains common plays that will run on all nodes.
 - name: bootstrap python
-  raw:  yum -y install python-simplejson
+  raw:  yum -y install python-simplejson libselinux-python
 
 
 - name: Create the repository for EPEL
