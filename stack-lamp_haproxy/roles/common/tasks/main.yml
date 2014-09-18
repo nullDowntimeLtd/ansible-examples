@@ -1,5 +1,8 @@
 ---
 # This role contains common plays that will run on all nodes.
+- name: bootstrap python
+  raw:  yum -y install python-simplejson
+
 
 - name: Create the repository for EPEL
   copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
