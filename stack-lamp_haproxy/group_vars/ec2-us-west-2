@@ -10,7 +10,7 @@ ec2_new_instances:
     group: demo
     instance_tags: 
         Demo: webservers
-        Name: demoaws
+        Name: demodfed
         Limit: west
     exact_count: 2
     count_tag: 
@@ -20,7 +20,7 @@ ec2_new_instances:
     group: demo
     instance_tags: 
         Demo: lbservers
-        Name: demoaws
+        Name: demodfed
         Limit: west
     exact_count: 1
     count_tag: 
@@ -30,7 +30,7 @@ ec2_new_instances:
     group: demo
     instance_tags: 
         Demo: dbservers
-        Name: demoaws
+        Name: demodfed
         Limit: west
     exact_count: 1
     count_tag: 
@@ -40,7 +40,7 @@ ec2_new_instances:
     group: demo
     instance_tags: 
         Demo: monitoring
-        Name: demoaws
+        Name: demodfed
         Limit: west
     exact_count: 1
     count_tag: 
