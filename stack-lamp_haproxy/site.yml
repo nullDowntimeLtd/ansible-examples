@@ -10,7 +10,7 @@
   - common
 
 # Configure and deploy database servers.
-- hosts: tag_Demo_dbservers
+- hosts: tag_Demo_dbservers 
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
