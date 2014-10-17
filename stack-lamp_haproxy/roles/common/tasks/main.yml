@@ -10,6 +10,9 @@
 - name: Create the GPG key for EPEL
   copy: src=RPM-GPG-KEY-EPEL-6 dest=/etc/pki/rpm-gpg
 
+- name: yum update all the things
+  yum: name=* state=latest
+
 - name: install some useful nagios plugins 
   yum: name={{ item }} state=present
   with_items:
