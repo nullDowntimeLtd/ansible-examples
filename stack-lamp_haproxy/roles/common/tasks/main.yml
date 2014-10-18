@@ -9,6 +9,9 @@
 - name: install the RPM
   shell: sudo rpm -ivh /etc/epel-release-6-8.noarch.rpm
 
+- name: enable extra stuff
+  shell: sudo yum-config-manager --enable rhel-6-server-optional-rpms
+
 - name: yum update all the things
   yum: name=* state=latest
 
