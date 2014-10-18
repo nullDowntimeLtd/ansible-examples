@@ -6,6 +6,12 @@
 - name: Create the GPG key for EPEL
   copy: src=RPM-GPG-KEY-EPEL-6 dest=/etc/pki/rpm-gpg
 
+- name: some SELinux things
+  yum: name={{ item }} state=present
+  with_items:
+   - libselinux-python
+   - libsemanage-python
+
 - name: yum update all the things
   yum: name=* state=latest
 
@@ -18,8 +24,6 @@
    - nagios-plugins-procs
    - nagios-plugins-load
    - nagios-plugins-disk
-   - libselinux-python
-   - libsemanage-python
    - python-simplejson
    - ntp
 
