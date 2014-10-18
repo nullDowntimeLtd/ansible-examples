@@ -1,7 +1,7 @@
 ---
 # This role contains common plays that will run on all nodes.
 
-- name: some SELinux things, non-yum:
+- name: install some SELinux things non-yum module
   raw: yum install -y libsemanage-python libselinux-python
 
 - name: Create the repository for EPEL
