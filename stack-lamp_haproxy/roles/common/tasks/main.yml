@@ -1,16 +1,10 @@
 ---
 # This role contains common plays that will run on all nodes.
-- name: bootstrap python
-  raw:  yum -y install python-simplejson libselinux-python
-
 - name: download RPM for EPEL
   get_url: url=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm dest=/etc/epel-release-6-8.noarch.rpm mode=0440
 
 - name: install the RPM
   shell: sudo rpm -ivh /etc/epel-release-6-8.noarch.rpm
-
-- name: enable extra stuff
-  shell: sudo yum-config-manager --enable rhel-6-server-optional-rpms
 
 - name: yum update all the things
   yum: name=* state=latest
@@ -24,10 +18,10 @@
    - nagios-plugins-procs
    - nagios-plugins-load
    - nagios-plugins-disk
-
-- name: Install ntp 
-  yum: name=ntp state=present
-  tags: ntp
+   - libselinux-python
+   - libsemanage-python
+   - python-simplejson
+   - ntp
 
 - name: Configure ntp 
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
