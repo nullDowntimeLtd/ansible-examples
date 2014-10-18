@@ -1,16 +1,14 @@
 ---
 # This role contains common plays that will run on all nodes.
+
+- name: some SELinux things, non-yum:
+  raw: yum install -y libsemanage-python libselinux-python
+
 - name: Create the repository for EPEL
   copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
 
 - name: Create the GPG key for EPEL
   copy: src=RPM-GPG-KEY-EPEL-6 dest=/etc/pki/rpm-gpg
-
-- name: some SELinux things
-  yum: name={{ item }} state=present
-  with_items:
-   - libselinux-python
-   - libsemanage-python
 
 - name: yum update all the things
   yum: name=* state=latest
