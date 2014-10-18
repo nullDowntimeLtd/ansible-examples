@@ -3,9 +3,11 @@
 - name: bootstrap python
   raw:  yum -y install python-simplejson libselinux-python
 
+- name: download RPM for EPEL
+  get_url: url=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm dest=/etc/epel-release-6-8.noarch.rpm mode=0440
 
-- name: Create the repository for EPEL
-  shell: wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm; sudo rpm -ivh epel-release-6-8.noarch.rpm
+- name: install the RPM
+  shell: sudo rpm -ivh /etc/epel-release-6-8.noarch.rpm
 
 - name: yum update all the things
   yum: name=* state=latest
