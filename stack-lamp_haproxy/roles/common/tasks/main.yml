@@ -1,10 +1,10 @@
 ---
 # This role contains common plays that will run on all nodes.
-- name: download RPM for EPEL
-  get_url: url=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm dest=/etc/epel-release-6-8.noarch.rpm mode=0440
+- name: Create the repository for EPEL
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
 
-- name: install the RPM
-  shell: sudo rpm -ivh /etc/epel-release-6-8.noarch.rpm
+- name: Create the GPG key for EPEL
+  copy: src=RPM-GPG-KEY-EPEL-6 dest=/etc/pki/rpm-gpg
 
 - name: yum update all the things
   yum: name=* state=latest
