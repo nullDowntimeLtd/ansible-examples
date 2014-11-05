@@ -1,7 +1,7 @@
 ---
 ec2_region: us-west-2
 ec2_image_cent: ami-b158c981
-ec2_image_ubuntu: 
+ec2_image_ubuntu: ami-cd5311fd
 ec2_instance_type: t1.micro
 ec2_keypair: dfed-vagrant
 ec2_security_group: default

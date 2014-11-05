@@ -22,7 +22,7 @@
       region: "{{ ec2_region }}"
       keypair: "{{ ec2_keypair }}"
       instance_type: "{{ item.instance_type }}"
-      image: "{{ ec2_image_cent }}"
+      image: "{{ ec2_image_ubuntu }}"
       wait: true
       instance_tags: "{{ item.instance_tags }}"
       exact_count: "{{ item.exact_count }}"
