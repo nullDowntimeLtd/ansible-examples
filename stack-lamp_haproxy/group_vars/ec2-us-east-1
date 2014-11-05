@@ -1,16 +1,63 @@
 ---
 ec2_region: us-east-1
-ec2_image: ami-eb6b0182 
+ec2_image_cent: ami-eb6b0182 
+ec2_image_ubuntu: 
 ec2_instance_type: t1.micro
 ec2_keypair: dfed-vagrant
 ec2_security_group: default
 
-ec2_new_instances:
+ec2_new_Cent_instances:
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: webservers
+        OS: cent
+        Name: demodfed
+        Limit: west
+    exact_count: 2
+    count_tag: 
+        Name: webcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: lbservers
+        OS: cent
+        Name: demodfed
+        Limit: west
+    exact_count: 1
+    count_tag: 
+        Name: lbcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: dbservers
+        OS: cent
+        Name: demodfed
+        Limit: west
+    exact_count: 1
+    count_tag: 
+        Name: dbcount
+
+  - instance_type: t1.micro
+    group: demo
+    instance_tags: 
+        Demo: monitoring
+        OS: cent
+        Name: demodfed
+        Limit: west
+    exact_count: 1
+    count_tag: 
+        Name: moncount
+
+ec2_new_Ubuntu_instances:
   - instance_type: t1.micro
     group: demo
     instance_tags: 
         Demo: webservers
         Name: demodfed
+        OS: ubuntu
         Limit: east
     exact_count: 2
     count_tag: 
@@ -21,6 +68,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: lbservers
         Name: demodfed
+        OS: ubuntu
         Limit: east
     exact_count: 1
     count_tag: 
@@ -31,6 +79,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: dbservers
         Name: demodfed
+        OS: ubuntu
         Limit: east
     exact_count: 1
     count_tag: 
@@ -41,6 +90,7 @@ ec2_new_instances:
     instance_tags: 
         Demo: monitoring
         Name: demodfed
+        OS: ubuntu
         Limit: east
     exact_count: 1
     count_tag: 

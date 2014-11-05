@@ -5,15 +5,27 @@
   vars_files:
   - group_vars/ec2-us-east-1
   tasks:
-  - name: Create the Instances for this vpc 
+  - name: Create the CentOS Instances for this vpc 
     ec2:
       region: "{{ ec2_region }}"
       keypair: "{{ ec2_keypair }}"
       instance_type: "{{ item.instance_type }}"
-      image: "{{ ec2_image }}"
+      image: "{{ ec2_image_cent }}"
       wait: true
       instance_tags: "{{ item.instance_tags }}"
       exact_count: "{{ item.exact_count }}"
       count_tag: "{{ item.count_tag }}"
     register: ec2
-    with_items: ec2_new_instances
+    with_items: ec2_new_Cent_instances
+  - name: Create the Ubuntu Instances for this vpc 
+    ec2:
+      region: "{{ ec2_region }}"
+      keypair: "{{ ec2_keypair }}"
+      instance_type: "{{ item.instance_type }}"
+      image: "{{ ec2_image_cent }}"
+      wait: true
+      instance_tags: "{{ item.instance_tags }}"
+      exact_count: "{{ item.exact_count }}"
+      count_tag: "{{ item.count_tag }}"
+    register: ec2
+    with_items: ec2_new_Ubuntu_instances
