@@ -1,6 +1,6 @@
 ---
-- name: install and start apache
-  hosts: tag_Demo_webservers
+- name: Cent install and start apache
+  hosts: tag_OS_cent
   remote_user: "{{ uservar }}"
   sudo: true
   sudo_user: root
@@ -12,3 +12,17 @@
 
   - name: start httpd
     service: name=httpd state=running
+
+- name: Ubuntu install and start apache
+  hosts: tag_OS_ubuntu
+  remote_user: "{{ uservar }}"
+  sudo: true
+  sudo_user: root
+
+  tasks:
+
+  - name: install httpd
+    apt: name=apache2 state=present
+
+  - name: start httpd
+    service: name=apache state=running
