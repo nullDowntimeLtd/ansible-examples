@@ -1,7 +1,7 @@
 ---
 - name: Cent install and start apache
   hosts: tag_OS_cent
-  remote_user: "{{ uservar }}"
+  remote_user: root
   sudo: true
   sudo_user: root
 
@@ -15,7 +15,7 @@
 
 - name: Ubuntu install and start apache
   hosts: tag_OS_ubuntu
-  remote_user: "{{ uservar }}"
+  remote_user: ubuntu
   sudo: true
   sudo_user: root
 

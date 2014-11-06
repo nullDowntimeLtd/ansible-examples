@@ -6,4 +6,5 @@
   sudo_user: root
 
   roles:
-    - webserver
+    - { role: webserver, when: "inventory_group == 'tag_OS_cent'" }
+    - { role: webserver, when: "inventory_hostname == 'tag_OS_ubuntu'"}
