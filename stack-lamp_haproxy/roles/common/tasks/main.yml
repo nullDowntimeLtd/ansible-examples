@@ -13,7 +13,7 @@
 - name: install some useful nagios plugins 
   yum: name={{ item }} state=present
   with_items:
-   - nagios-nrpe
+   - nagios-plugins-nrpe
    - nagios-plugins-swap
    - nagios-plugins-users
    - nagios-plugins-procs
