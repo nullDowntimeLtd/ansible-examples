@@ -10,8 +10,11 @@
 - name: Download EPEL
   yum: name=http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
 
+- name: update cache
+  shell: yum clean all
+
 - name: install some useful nagios plugins 
-  yum: name={{ item }} state=present update_cache=yes
+  yum: name={{ item }} state=present 
   with_items:
    - nagios-plugins
    - python-simplejson
