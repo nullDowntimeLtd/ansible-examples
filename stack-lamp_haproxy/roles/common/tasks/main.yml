@@ -4,6 +4,9 @@
 - name: install some SELinux things non-yum module
   raw: yum install -y libsemanage-python libselinux-python
 
+- name: remove epel
+  file: src=/etc/yum.repos.d/epel.repo state=absent
+
 - name: Download EPEL
   yum: name=http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
 
