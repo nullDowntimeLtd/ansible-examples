@@ -2,12 +2,12 @@
 # This playbook deploys the whole application stack in this site.  
 
 # Apply common configuration to all hosts
-- hosts: tag_Name_demodfed
-  remote_user: "{{ uservar }}"
-  sudo: true
+# - hosts: tag_Name_demodfed
+#   remote_user: "{{ uservar }}"
+#   sudo: true
   
-  roles:
-  - common
+#   roles:
+#   - common
 
 # Configure and deploy database servers.
 - hosts: tag_Demo_dbservers 
