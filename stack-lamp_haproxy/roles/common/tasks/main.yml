@@ -1,10 +1,8 @@
 ---
 # This role contains common plays that will run on all nodes.
 
-
-
 - name: remove epel
-  file: path=/etc/yum.repos.d/epel.repo state=absent
+  file: path=/etc/yum.repos.d/epel*.repo state=absent
 
 - name: install some SELinux things non-yum module
   raw: yum install -y libsemanage-python libselinux-python
@@ -15,12 +13,7 @@
 - name: install some useful nagios plugins 
   yum: name={{ item }} state=present
   with_items:
-   - nagios-plugins-nrpe
-   - nagios-plugins-swap
-   - nagios-plugins-users
-   - nagios-plugins-procs
-   - nagios-plugins-load
-   - nagios-plugins-disk
+   - nagios-plugins*
    - python-simplejson
    - ntp
 
