@@ -17,6 +17,7 @@
       count_tag: "{{ item.count_tag }}"
     register: ec2
     with_items: ec2_new_Cent_instances
+    
   - name: Create the Ubuntu Instances for this vpc 
     ec2:
       region: "{{ ec2_region }}"
