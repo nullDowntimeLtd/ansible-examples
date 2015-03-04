@@ -22,4 +22,4 @@ balance: roundrobin
 #
 # ...to override.
 #
-iface: '{{ ansible_eth0.ipv4.address }}'
+iface: '{{ ansible_eth1.ipv4.address }}'
