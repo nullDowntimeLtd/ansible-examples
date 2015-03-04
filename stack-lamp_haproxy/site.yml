@@ -14,6 +14,7 @@
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
+  - common
   - db
 
 # Configure and deploy the web servers. Note that we include two roles here, 
@@ -23,6 +24,7 @@
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
+  - common
   - base-apache
   - web
 
@@ -31,6 +33,7 @@
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
+  - common
   - haproxy
 
 # Configure and deploy the Nagios monitoring node(s).
@@ -38,5 +41,6 @@
   remote_user: "{{ uservar }}"
   sudo: true
   roles:
+  - common
   - base-apache
   - nagios
